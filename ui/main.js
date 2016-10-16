@@ -8,13 +8,14 @@ button.onclick = function(){
     //Capture the response and store it in a variable
     request.onreadystatechange = function(){
       
-      if(request.status === 200){
-          //take some action
-            var counter = request.responseText();
-            var span = document.getElementById('count');
-            span.innerHTML = counter.toString();      
-      }
-      //do nothing
+      if(request.readyState === XMLHttpRequest.DONE)
+          //Take action
+          if(request.status === 200){
+              //take some action
+                var counter = request.responseText();
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();      
+          }
         
     };
     
