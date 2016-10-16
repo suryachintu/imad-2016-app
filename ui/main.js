@@ -1,6 +1,19 @@
-console.log('Loaded!');
+//counter code
+var button = document.getElementById('counter');
+var counter = 0;
 
-//change the text of the main-text div
-var element = document.getElementById('main-text');
-
-element.innerHTML = 'New Value';
+button.onclick = function(){
+    
+    // Make a request to counter end point
+    
+    //Capture the response and store it in a variable
+    
+    //Render the variable in correct span
+    var span = document.getElementByID('count');
+    
+    counter = counter + 1 ;
+    
+    span.innerHTML = counter.toString();
+    
+    
+}
