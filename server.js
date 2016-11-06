@@ -17,41 +17,6 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articles={
-   'article-one':{
-    title:'Article One',
-    heading:'Article One',
-    date:'13 October 2016',
-    content:`<p>
-               this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.
-            </p>
-            <p>
-               this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.
-            </p>   
-            <p>
-               this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.this is the content for Article one.
-            </p>`
-},
-   'article-two':{
-       title:'Article Two',
-       heading:'Article Two',
-       date:'13 October 2016',
-       content:`<p>
-               this is the content for Article Two.
-            </p>`
-       
-   },
-   'article-three':{
-       title:'Article Three',
-       heading:'Article Three',
-       date:'13 October 2016',
-       content:`<p>
-               this is the content for Article Three.
-            </p>`
-   }
-};
-
-
 
 function createTemplate(data){
     var title=data.title;
