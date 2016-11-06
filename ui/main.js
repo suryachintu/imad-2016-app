@@ -31,7 +31,7 @@ submit.onclick = function(){
     var password = document.getElementById('password').value;
     console.log(username + password);
     //make a request 
-    request.setHeaderType('Content-Type','application/json');
+    request.setRequestHeader('Content-Type','application/json');
     request.open('POST','http://suryachintu.imad.hasura-app.io/login',true);
     request.send(JSON.stringify({"username":username,"password":password}));
     
