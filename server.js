@@ -53,7 +53,7 @@ function createTemplate(data){
 function hash(input){
     
     var hashed = crypto.pbkdf2Sync(input, 'salt', 10000, 5, 'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2",10000,"salt",hashed.toString('hex')].join('$');
 }
 
 app.get('/hash/:input', function (req, res) {
