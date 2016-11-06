@@ -15,10 +15,15 @@ submit.onclick = function(){
             console.log("user logged in");
             alert("Successfully logged in ");
           }
-          else (request.status === 403)
+          else if(request.status === 403)
           {
             alert("invalid credentials");
           }
+          else if(request.status === 500)
+          {
+            alert("Something went wrong");
+          }
+          
       }
         
     };
@@ -26,6 +31,7 @@ submit.onclick = function(){
     var password = document.getElementById('password').value;
     console.log(username + password);
     //make a request 
+    request.setHeaderType('Content-Type','application/json');
     request.open('POST','http://suryachintu.imad.hasura-app.io/login',true);
     request.send(JSON.stringify({"username":username,"password":password}));
     
