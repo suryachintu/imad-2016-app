@@ -66,7 +66,7 @@ app.get('/hash/:input', function (req, res) {
     
 });
 
-app.post('/create-user', function (req, res) {
+app.post('/login', function (req, res) {
     
     //{"username":"surya","password":"dummy"}
     
@@ -94,7 +94,7 @@ app.post('/create-user', function (req, res) {
     
 });
 
-app.post('/login', function (req, res) {
+app.post('/create-user', function (req, res) {
     
     //{"username":"surya","password":"dummy"}
     
