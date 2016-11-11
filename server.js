@@ -54,8 +54,12 @@ function createTemplate(data){
         <div>
         <h3>Comments</h3>
         <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required="" aria-invalid="false"></textarea>
+          <textarea name="message" id="message" placeholder="Comment" required="" aria-invalid="false"></textarea>
           <p class="help-block text-danger"></p>
+          
+          <br/>
+          
+          <input type="submit" id="submitCom" value="Comment"/>
         </div>
         </div>
         </div>
