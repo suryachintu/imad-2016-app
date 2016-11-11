@@ -50,7 +50,10 @@ function createTemplate(data){
         </div>    
         <div>
         ${content} 
-        </div>  
+        </div> 
+        <div>
+        <h3>Comments</h3>
+        </div>
         </div>
         </body>    
         </html>
